@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body style="margin-left: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <a href="./index.html">Volver al inicio</a>
+    <p>Hasta el momento todo lo visto sirve unicamente para
+        mostrarle información al usuario, sean imagenes, texto etc.
+    </p>
+    <p>
+        Sin embargo en HTML existen los formularios los cual nos permiten
+        obtener información del usuario, todo esto, utilizando la etiqueta
+        "form"
+    </p>
+    <h1>Elemento <i>form</i></h1>
+        <h2>parametros</h2>
+            <h3>action</h3>
+            <p>Presentado en la forma de <i>action="[URL]"</i>
+                , se utiliza para indicar hacia donde será dirigida la
+                información obtenida del usuario suele ir a paginas PHP
+                o JS (javascript)
+            </p>
+
+            <h3>method</h3>
+            <p>Presentado en la forma de <i>method="[GET/POST/PUT/DELETE]"</i>. Nos
+                permite indicar que hacer con la información recibida
+            </p>
+        <h2>Elementos del formulario</h2>
+            <h3>label</h3>
+                <p>Lo utilizamos para asignar variables donde se contendran
+                    los valores ingresados por el usuario.
+                </p>
+                <p>
+                    Se presenta en la forma <i>&#60label for="[nombre de variable]"&#62
+                    [texto]&#60/label&#62</i>
+                </p>
+                <p>Se usa usualmente junto al siguiente elemento, <i>input</i> </p>
+            <h3>input</h3>
+                <p>Ahora si, con este elemento le permitiremos al usuario ingresar
+                    información util para el funcionamiento de nuestra pagina web
+                </p>
+                <p>
+                    Se presenta en la forma <i>&#60input type="[text]"&#62</i>
+                </p>
+                <p>
+                    Esto nos crea una caja de texto con caracteristicas dependientes
+                    del parametro type ingresado.
+                </p>
+                <p>ejemplo:</p>
+                <div><i>&#60label for="username"&#62
+                    Nombre de usuario:&#60/label&#62</i></div>
+                <div><i>&#60input type="[text]"&#62</i></div>
+                <p>Da como resultado:</p>
+                <label for="username">Nombre de usuario:</label>
+                <input type="text">
+
+                <p>Obviamente, no sirve unicamente para ingresar texto, esto se puede 
+                    modificar segun nuestras necesidades modificando el valor del 
+                    parametro type:
+                </p>
+                <ul>
+                    <li>text: como vimos, se utiliza para ingresar caracteres alfanuméricos</li>
+                    <li>number: se utiliza para ingresar UNICAMENTE números (enteros)
+                        <div><label for="numero">Ingrese numero:</label>
+                <input type="number"></div>
+                    </li>
+                    <li>password: se utiliza para ingresar contraseñas alfanuméricas
+                        pero sin poder visualizar lo que ingresamos.
+                        <div><label for="password">Contraseña:</label>
+                        <input type="password"></div>
+                    </li>
+                    <li>email: a niveles visuales es lo mismo que el tipo texto, sin embargo con
+                        otro elemento de la etiqueta <i>input</i> podemos verificar si el texto 
+                        ingresado es efectivamente un email (a nivel sintactico)
+                        <div><label for="email">Correo electrónico:</label>
+                            <input type="email"></div>
+                    </li>
+                </ul>
+
+            <h3>select</h3>
+                <p>Este elemento nos permite crear una lista desplegable con varias opciones
+                    encadenadas para que el usuario pueda elegir UNA de ellas.
+                    <div>Dichas opciones van dentro del elemento <i>option</i></div>
+                </p>
+                <p>Se presenta de la forma
+                    <div><i>&#60 select name=" " id=" "&#62
+                        <div><i>&#60 option value="[text]"&#62[text]&#60 /option&#62</i></div>
+                        &#60/select&#62</i></div>
+                    
+                </p>
+                <p>Ejemplo:</p>
+                <select name="Autos" id="">
+                    <option value="FIAT">FIAT</option>
+                    <option value="FORD">FORD</option>
+                    <option value="FERRARI">FERRARI</option>    
+                </select>
+
+            <h3>textarea</h3>
+                <p>Es un elemento similar al <i>text</i> sin embargo este elemento posee
+                    argumentos que nos permiten modificar el tamaño del cuadro de texto,
+                    ideal para cuando necesitamos que el usuario introduzca grandes
+                    cantidades de texto, por ejemplo, una caja de comentarios
+                </p>
+                <p>Se presenta de la forma:
+                    <div><i>&#60 textarea name="[name]" id=" " cols="[# de columnas]" rows="[# de filas]" &#62&#60 /textarea&#62</i></div>
+                </p>
+                <p>Ejemplo:
+                    <div><textarea name="Caja de comentarios" id="" cols="30" rows="10"></textarea></div>
+                </p>
+                <p>Cabe destacar que en realidad el tamaño de esta caja es modificable,
+                    los tamaños indicados en el HTML son los que se mostraran por defecto
+                    cada vez que se cargue la página
+                </p>
+            <h3>input type="file" y parametro <i>enctype</i></h3>
+                <p>Hay un 5to valor posible del input type anteriormente mencionado,
+                    <i> file</i>, este nos permite subir archivos a la pagina web de la 
+                    siguiente forma:
+                    <div><form enctype="multipart/form-data" action="">
+                        <input type="file">
+                    </form></div>
+                </p>
+                <p>
+                    Es importante aclarar que este tipo de archivo debe ir acompañado de
+                    un parametro dentro del elemento form, el <i>enctype</i>, que puede 
+                    tomar 3 valores posibles:
+                    <ul>
+                        <li>application/x-www-form-urlenconded: sirve para cargar scripts que puedan
+                            ser procesados por el navegador (archivos .js; .php;etc) </li>
+                        <li>multipart/form-data: Permite subir cualquier tipo de archivos</li>
+                        <li>text/plain: permite subir unicamente archivos de texto plano (.txt)</li>
+                    </ul>
+                    Mas adelante veremos como mandar o utilizar los archivos subidos
+                </p>
+
+    
+</body>
+</html>

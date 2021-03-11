@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <a href="../index.html">Volver al inicio</a>
+    <h1>Introducción a CSS</h1>
+    <p>El CSS es otro lenguaje de interpretacion que va siempre en conjunto 
+        al HTML, este nos permite dar estilo color y animaciones a este ultimo.
+        <div>Metaforicamente el HTML es el contorno del dibujo y el CSS es la pintura</div>
+    </p>
+
+    <p>Para hacer esto hay tres metodos:</p>
+    <ol>
+        <li><div> in line:
+            este metodo consiste en aplicar la propiedad <i>style</i> en la etiqueta correspondiente
+            de la siguiente forma</div>
+            <div> &#60 [html tag] <b>style=""</b> >&#60 /[HTML tag]</div>
+            <div>Un ejemplo de un div con la propiedad de borde aplicada seria:</div>
+            <div style="border: aqua 1px solid;">hola</div>
+            <p>Este metodo es poco recomendado ya que solo sirve para enriquecer dicha etiqueta en
+                especifico, es decir, estas propiedades no seran transmitidas a otras etiquetas de
+                mismas caracteristicas. Por lo que no es recomendable para propiedades en comun de 
+                varios elementos
+            </p>
+        </li>
+        <li><div>En el elemento header:
+                Podemos aplicar propiedades generalizadas para un tipo especifico de etiqueta dentro
+                del header, por lo que si aplicaramos el borde al div dentro del header, todos los div
+                dentro de la pagina tendrá dichas propiedades 
+            </div>
+            <div>Un ejemplo del header con CSS es:</div>
+                <i><div>&#60head></div>
+                <div>&#60meta charset="UTF-8"></div>
+                <div>&#60meta http-equiv="X-UA-Compatible" content="IE=edge"></div>
+                <div>&#60meta name="viewport" content="width=device-width, initial-scale=1.0"></div>
+                <div>&#60title>CSS&#60/title></div>
+                <div>&#60/head></div>    
+                <div><b> &#60style>
+                    [HTML TAG]{ properties="";}
+                    &#60/style</b></div></i>
+            
+            <p>Este metodo es util para paginas unicas, sin dudas mejor en general que el metodo anterior
+                pero cuando realizamos un proyecto medianamente complejo con navegacion entre paginas, 
+                usualmente queremos que cada pagina tenga un estilo similar, por lo que suele preferirse
+                el siguiente metodo 
+            </p>
+        </li>
+        <li><div>Archivo externo y referencia en header:
+            Este ultimo metodo suele ser el predilecto a la hora de enriquecer esteticamente una web,
+            consiste en crear un archivo ".CSS" y hacer que el HTML se refiera a el desde el header con
+            el tag:</div>
+            <div>&#60link rel="stylesheet" href="[ubicacion de archivo]"></div>
+            <p>Este metodo es el predilecto ya que creando un unico archivo podemos usarlo como "plantilla"
+                de estilo para todas las paginas del proyecto.
+            </p>
+            <p>Para enriquecer los tags dentro del archivo CSS se debe editar cada etiqueta como en el 
+                metodo anterior
+            </p>
+        </li>
+    </ol>
+    <h1>Normalize.CSS</h1>
+    <p>Cada navegador procesa la informacion dentro de un CSS de
+        diferentes formas, <b> normalize</b> es una libreria de 
+        CSS que se encarga justamente de igualar el estilo CSS
+        alrededor de todos los navegadores
+    </p>
+    <h1>Selectores</h1>
+    <p>Los selectores son la forma de indicarle a nuestro archivo .CSS a que elementos del HTML queremos
+        cambiarle el estilo, por ejemplo para "decorar" dos parrafos con diferentes caracteristicas
+    </p>
+    <p><div> Para lograr esto hay 3 formas:</div>
+        <div>
+            <ul><li>Por tipo de elementos: nos permite darle formato equitativo a todos el texto perteneciente
+                a un mismo tipo de elementos, es decir, este formato sera compartido por todos los elementos iguales
+            </li>
+                <li>Por clases: añadiendo la propiedad <i>class="[nombre]"</i> a la etiqueta de apertura del tipo de elemento
+                    podemos hacer que todos los elementos pertenecientes a esta misma clase tengan cierto formato en comun,
+                    <div>Decimos cierto formato ya que dentro de una misma clase podemos definir diferentes formatos para
+                        diferentes elementos, por ejemplo dentro de la clase "estilizado" podemos hacer que todos los elementos
+                        tengan fondo rosa y fuente marron, pero ademas poner una clausula que ademas de este formato en comun, 
+                        a los encabezados se les aplique cursiva.
+                    </div>
+                    <div>Para referenciar a una clase en el css debemos añardir el prefijo <b>.</b> antes del nombre de la clase</div>
+                </li>
+                <li>Por id: Sirve para elementos singulares mas que nada, por ejemplo si queremos que una div en especifico tenga un
+                    alineamiento y fuente diferente al resto del cuerpo de la pagina.
+                    <div>Para referenciarlo en el CSS debemos utilizar el prefijo <b>#</b>.</div>
+                </li>
+            </ul>
+        </div>
+    </p>
+
+</body>
+</html>
