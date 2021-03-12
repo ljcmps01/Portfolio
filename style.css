@@ -40,6 +40,20 @@ Navigation menu
 }
 
 /*=============
+Main
+===============*/
+main p{
+    margin-left: 1em;
+}
+
+/*=============
+Contact Me logos
+===============*/
+.logos img{
+    height: 2em;
+}
+
+/*=============
     HTML-index
 ===============*/
 
