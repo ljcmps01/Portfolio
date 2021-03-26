@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Decoración</title>
     <link rel="stylesheet" href="./normalize.css">
     <link rel="stylesheet" href="./estilos.css">
 </head>
 <body>
     <a href="../index.html">Volver al inicio</a>
     <main>
+        <p>La mayoria de estos ejemplos se realizaran a partir de elementos div.</p>
         <h1>Bordes</h1>
-            <p>Estos ejemplos se realizaran a partir de elementos div. <br>
-                Los bordes en CSS tienen 3 caracteristicas basicas: el ancho, el estilo, el color. <br>
+            <p> Los bordes en CSS tienen 3 caracteristicas basicas: el ancho, el estilo, el color. <br>
                 El unico que vale la pena explicar es el estilo, y solo hace falta saber que estan <i>solid</i>,
                 una linea continua alrededor del elemento contenedor, <i>dashed</i>, este estilo crea una linea 
                 intermitente alrededor,<i>dotted</i>
@@ -71,6 +71,21 @@
                     En realidad, cuando el contenedor tiene lados de igual tamaño, el efecto del circulo se creará a partir del 50%
                     pero si el contenedor no es equilatero se creará un ovalo, utilizar 100% suele ser mejor practica para crear circulos
                 </p>
+
+        <h1>Sombras</h1>
+            <p>Dentro de CSS podemos lograr aplicarle la propiedad de sombras tanto a los contenedores (box-shadow) como al texto (text-shadow) <br>
+                Esta propiedad tiene 4 parametros principales acorde a la siguiente sintaxis:
+                <div style="font-style: italic;">
+                    box-shadow: [Desplazamiento en X] [Desplazamiento en Y] [blur] [color] <br>
+                    text-shadow: [Desplazamiento en X] [Desplazamiento en Y] [blur] [color] 
+                </div>
+                <div class="contenedor">
+                    <div class="shadow" id="shadow1">box-shadow: 0 <br> 0 <br> .5rem <br> grey;</div>
+                    <div class="shadow" id="shadow2">box-shadow: .25rem <br>.25rem  <br>grey;</div>
+                    <div class="shadow" id="shadow3">box-shadow: -.25rem<br> .5rem <br>1rem<br> grey;</div>
+                </div>
+                Para el texto aplica los mismos parametros.
+            </p>
     </main>
     
 </body>
