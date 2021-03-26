@@ -43,7 +43,7 @@ Navigation menu
 Main
 ===============*/
 main p{
-    margin-left: 1em;
+    left: -1em;
 }
 
 /*=============

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+<body>
+    <a href="../index.html">Volver al inicio</a>
+    <main>
+        <h1>Bordes</h1>
+            <p>Estos ejemplos se realizaran a partir de elementos div. <br>
+                Los bordes en CSS tienen 3 caracteristicas basicas: el ancho, el estilo, el color. <br>
+                El unico que vale la pena explicar es el estilo, y solo hace falta saber que estan <i>solid</i>,
+                una linea continua alrededor del elemento contenedor, <i>dashed</i>, este estilo crea una linea 
+                intermitente alrededor,<i>dotted</i>
+            </p>
+            <div class="contenedor">
+                <div class="bordes" id="border1">borde solido <br> tamaño 1em <br> color burlywood</div>
+                <div class="bordes" id="border2">borde dashed <br> tamaño 1.5em <br> color black</div>
+                <div class="bordes" id="border3">borde dotted <br> tamaño 0.5em <br> color dodgerblue</div>
+            </div>
+            <p>
+                Aparte de estas 3 caracteristicas, tambien disponemos de otras caracteristicas que podremos encontrar
+                bastante utiles. <br>
+                Para adelantar un poco, en el CSS al editar el "border" estamos editando todas las caras del mismo, sin
+                embargo, tambien es posible editarlo como "border-[top/right/bottom/left]" para editar una cara especifica.
+            </p>
+            <h3>Border-width</h3>
+                <p>
+                    Nos permite editar diversamente el ancho cada lado del borde. Podemos de 2 a 4 parametros. <br>
+                    <ul>
+                        <li>4 parametros: Le asignamos un ancho especifico a cada lado del borde en sentido horario 
+                            (top>right>bottom>left)
+                            <div class="contenedor">
+                                <div class="bordes"  id="border4">border-width: <br> .2em <br> .3em <br> .1em <br> .6em;</div>
+                                <div class="bordes" id="border5">border-width: <br>.2em<br> .4em <br>.15em<br> .3em;</div>
+                                <div class="bordes" id="border6">border-width: <br>.6em<br> .3em<br> .5em<br> .45em;</div>
+                            </div>
+                        </li>
+                        <li>3 parametros: Le asignamos un ancho especifico al lado superior, al izquierdo y derecho juntos y el inferior 
+                            (top>right & left>bottom>)
+                            <div class="contenedor">
+                                <div class="bordes"  id="border7">border-width: <br> .2em <br> .3em <br> .1em </div>
+                                <div class="bordes"  id="border8">border-width: <br>.2em<br> .4em <br>.15em</div>
+                                <div class="bordes"  id="border9">border-width: <br>.6em<br> .3em<br> .5em</div>
+                            </div>
+                        </li>
+                        <li>2 parametros: Le asignamos un ancho especifico al lado superior e inferior, al izquierdo y derecho juntos
+                            (top & bottom>right & left)
+                            <div class="contenedor">
+                                <div class="bordes"  id="border10">border-width: <br> .2em <br> .3em </div>
+                                <div class="bordes"  id="border11">border-width: <br>.2em<br> .4em </div>
+                                <div class="bordes"  id="border12">border-width: <br>.6em<br> .3em</div>
+                            </div>
+                        </li>
+                    </ul>
+                </p>
+            <h3>Border radius</h3>
+                <p>
+                    Esta caracteristica nos permite redondear las esquinas del borde con cierto porcentaje.
+                    Notese lo que sucede cuando el borde es 100%. 
+                    <div class="contenedor">
+                        <div class="bordes" id="border13">10%</div>
+                        <div class="bordes" id="border14">25%</div>
+                        <div class="bordes" id="border15">100%</div>
+                    </div>
+                    En realidad, cuando el contenedor tiene lados de igual tamaño, el efecto del circulo se creará a partir del 50%
+                    pero si el contenedor no es equilatero se creará un ovalo, utilizar 100% suele ser mejor practica para crear circulos
+                </p>
+    </main>
+    
+</body>
+</html>
