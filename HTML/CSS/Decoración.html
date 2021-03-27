@@ -86,7 +86,24 @@
                 </div>
                 Para el texto aplica los mismos parametros.
             </p>
+        
+        <h1>Modelo de caja</h1>
+            <p>Todo contenedor de CSS posee un modelo definido por 4 caracteristicas invisibles al usuario, estas caracteristicas son:
+                <ul>
+                    <li>size (content): es el tamaño en si del contenido</li>
+                    <li>padding: es un espaciado predefinido</li>
+                    <li>border: es el borde del que ya hablamos anteriormente</li>
+                    <li>margin: es el margen aplicado al contenido "por ultimo" luego de todas propiedades anteriores</li>
+                </ul>
+                <figure>
+                    <img src="../../img/box-model.png" alt="boxmodel">
+                </figure>
+                Lo importante a tener en cuenta es al momento de modelar, ya que los margenes se colapsan los unos a los otros, es decir,
+                supongamos que tenemos dos elementos parrafo, uno seguido del otro, por defecto (en Chrome) el margen será de 16px arriba y abajo,
+                al tener un elemento debajo del otro, uno asumiria que habria 32px de distancia entre elemento y elemento debido a que ambos elementos
+                tienen 16px de arriba y abajo. Sin embargo, que los margenes colapsen implica que el margen mayor "contendrá" al menor, en este caso al
+                ser ambos del mismo tamaño, el margen simplemente será de 16px.
+            </p>
     </main>
-    
 </body>
 </html>
