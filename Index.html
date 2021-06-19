@@ -5,34 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alejo's portfolio</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">    <link rel="stylesheet" href="/assets/normalize.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/normalize.css">
 </head>
 <body>
+    <!-- HEADER -->
     <header>
-        <nav class="navbar">
-            <h1>Alejo's <br> landing page</h1>
-            <div>
-                <a href="">Web Dev</a>
-                <a href="">Electronics</a>
-                <a href="./HTML/index.html">HTML</a>
-            </div>
-        </nav>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3 rounded-3">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-4 col-xl-2 navbar-dark mx-auto">
+                            <img src="/assets/img/MyPhoto.jpg" class="img-fluid rounded-circle " alt="">
+                        </div>
+                        <div class="col-12 col-xl-10  text-light text-center navbar-dark my-auto">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi modi similique, in repudiandae natus sint eligendi earum dolores possimus eos maiores. Earum unde sit aliquam distinctio, harum cumque tempora a atque deleniti libero, possimus officiis vero blanditiis ut dolores nobis facilis, saepe nemo placeat laudantium inventore delectus corrupti repudiandae?
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </header>
+    <!-- FIN HEADER -->
+
+    <!-- TARJETAS -->
     <main>
-        <h1>About Me</h1>
-            <p>Hi! My name is Alejo Campos, I'm a Electronics Engineer Student at ITBA College.
-                <br>I'm already a highschool graduated Electronics Technician, with an ever growing
-                <br>passion for electronics, coding, creating my own stuff/projects, and repair old tech
-                <br>and bringing it back to life.
-            </p>
-        <h1>Contact Me</h1>
-            <figure class="logos">
-                <img src="./img/Telegram.png" alt="">@ljcmps01 <br>
-                <img src="./img/Whatsapp.png" alt="">Whatsapp
-            </figure>
-            
+        <div class="container mt-5 justify-content-center">
+            <div class="row g-5">
+                <div class="col-6 col-xl-3 ">
+                    <div class="card" style="width: auto;">
+                        <img src="assets/img/WebDevBG.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <a href="#" class="link-dark">
+                                <h5 class="card-title">WebDev</h5>
+                            </a>
+                            <p class="card-text">Aunque sigo en constante aprendizaje, tengo los conocimientos suficientes para desarrollar páginas web de uso simple. 
+                            </p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-6 col-xl-3 ">
+                    <div class="card" style="width: auto;">
+                        <img src="assets/img/ElectronicsBG.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <a href="#" class="link-dark">
+                                <h5 class="card-title">Electronica</h5>
+                            </a>
+                                <p class="card-text">Gracias a mis años como estudiante de electrónica desarrolle buenas habilidades para el analisis y desarrollo de circuitos electrónicos.
+                                </p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-6 col-xl-3 ">
+                    <div class="card" style="width: auto;">
+                        <img src="assets/img/CodingBG.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <a href="#" class="link-dark">
+                                <h5 class="card-title">Programación</h5>
+                            </a>
+                          <p class="card-text">A traves de multiples cursos obtuve conocimientos de diversos lenguajes de programación (C, C++, Python y JS).</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-6 col-xl-3 ">
+                    <div class="card" style="width: auto;">
+                        <img src="assets/img/OthersBG.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <a href="#" class="link-dark">
+                                <h5 class="card-title">Otros</h5>
+                            </a>
+                            <p class="card-text">Cuando no me dedico a la tecnologia hago otras cosas para despejar un poco.</p>
+                        </div>
+                      </div>
+                </div>
+            </div>            
+        </div>    
     </main>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
