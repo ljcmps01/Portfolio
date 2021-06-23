@@ -12,10 +12,31 @@
     <title>WebDev</title>
 </head>
 <body>
+    <div class="container" style="display: flexbox;">
         <!--Sidebar-->
-        <section class="sidebar">
-            <img src="/assets/img/MyPhoto.jpg" class="icon img-fluid rounded-circle p-3">
-        </section>
+        <!-- <div class="d-flex justify-content-start ">
+            <button class="sidebar-toggler btn btn-secondary mt-3 me-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSidebar" aria-expanded="false" aria-controls="collapseSidebar">
+                <i class="bi bi-align-start" fill="black"></i>
+            </button>
+        </div> -->
+        <div id="collapseSidebar">
+            <section class="sidebar">                
+                <img src="/assets/img/MyPhoto.jpg" class="icon img-fluid rounded-circle d-block mx-auto">
+                
+                <div class="introduction text-light text-center">
+                    Soy Alejo Campos, técnico electrónico aficionado a la tecnología, la programación y los circuitos electrónicos. <br>
+                    Bienvenido a mi pagina web, en ella vas a encontrar un showcase de mis proyectos pasados y demases
+                </div>
+    
+            </section>
+        </div>
+        
+
+        <!-- Contenido -->
+        <main class="content">
+            
+        </main>
+    </div>
         
 </body>
 </html>
